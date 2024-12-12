@@ -25,5 +25,9 @@ class steve(Prisoner):
     op_coop = 0
     def play(self):
         if random.random()*100 < 20: return 0
-        if (self.op_coop >= 5): return 0
-        else: return 1
+        if (self.op_coop >= 2): 
+            self.op_coop = 0
+            return 0
+        else: 
+            self.op_coop+=1
+            return 1
